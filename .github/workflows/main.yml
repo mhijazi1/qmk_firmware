@@ -19,7 +19,8 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        sudo apt-get install gcc-avr
+        sudo apt-get install gcc-avr binutils-avr avr-libc gdb-avr
+        sudo apt-get install avrdude
         python -m pip install --upgrade pip
         pip install --user qmk
         qmk setup -y
